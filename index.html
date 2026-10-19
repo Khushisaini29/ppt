@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An educational web development presentation for BTech CSE students.">
+  <title>Introduction to Web Development</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true">
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 9-3 3 3 3M16 9l3 3-3 3M14 5l-4 14"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.8 3 14.2 0 18M12 3c-3 3.8-3 14.2 0 18"/></symbol>
+    <symbol id="i-browser" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 8h18M7 6h.01M10 6h.01M13 6h.01"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="6" rx="1"/><rect x="4" y="15" width="16" height="6" rx="1"/><path d="M7 6h.01M7 18h.01M17 6h1M17 18h1"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c.8-4.1 3.5-6.2 8-6.2s7.2 2.1 8 6.2"/></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v7c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 12v7c0 1.7 3.1 3 7 3s7-1.3 7-3v-7"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="19" cy="19" r="2"/><path d="m6.8 11 10.4-5M6.8 13l10.4 5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4.2 4L19 6"/></symbol>
+  </svg>
+
+  <header class="topbar" aria-label="Presentation controls">
+    <div class="brand"><svg><use href="#i-code"/></svg><span>WEB DEVELOPMENT</span></div>
+    <div class="status"><span id="counter" aria-live="polite">01 / 12</span><button id="focusToggle" class="quiet" type="button" title="Toggle presentation mode (P)">Focus</button></div>
+  </header>
+  <main id="deck" class="deck">
+    <section class="slide cover active" data-title="Introduction to Web Development">
+      <div class="cover-art"></div><div class="cover-wash"></div>
+      <div class="cover-copy animate-in">
+        <div class="eyebrow">BTECH CSE CLASSROOM PRESENTATION</div>
+        <h1>Introduction to<br><span>Web Development</span></h1>
+        <p>Understanding the Internet, Browser, Client, and Server</p>
+        <div class="cover-rule"></div>
+        <small>HTML · CSS · JavaScript · Client–Server Architecture</small>
+      </div>
+      <div class="cover-chip">12-slide learning guide</div>
+    </section>
+
+    <section class="slide" data-title="What Is Web Development?">
+      <div class="slide-inner split-definition">
+        <div>
+          <div class="eyebrow">01 · THE BIG PICTURE</div>
+          <h2>What Is <span>Web Development?</span></h2>
+          <p class="lede">Web development is the process of creating, building, and maintaining websites and web applications.</p>
+          <div class="definition-callout"><strong>Web development combines design, programming, and data management to create functional websites.</strong></div>
+        </div>
+        <div class="layers-visual" aria-label="Frontend, backend, and full stack layers">
+          <article class="layer frontend"><svg><use href="#i-browser"/></svg><div><b>Frontend development</b><span>The part users see and interact with</span></div></article>
+          <article class="layer backend"><svg><use href="#i-server"/></svg><div><b>Backend development</b><span>Server-side logic and data processing</span></div></article>
+          <article class="layer fullstack"><svg><use href="#i-code"/></svg><div><b>Full-stack development</b><span>Work across frontend and backend</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Internet: Definition and Overview">
+      <div class="slide-inner">
+        <div class="eyebrow">02 · FOUNDATION</div><h2>The <span>Internet</span></h2>
+        <div class="two-col internet-layout">
+          <div>
+            <p class="lede">A <strong>global network of interconnected networks</strong> that lets devices communicate and exchange information.</p>
+            <ol class="number-list">
+              <li><b>Network of networks</b><span>Links local, private, academic, business, and government networks.</span></li>
+              <li><b>Physical backbone</b><span>Uses cables, fiber-optic links, data centers, wireless, and satellites.</span></li>
+              <li><b>Communication protocols</b><span><strong>TCP/IP</strong> defines common rules for transferring data in packets.</span></li>
+              <li><b>Decentralized infrastructure</b><span>Network operators and service providers maintain many connected parts.</span></li>
+            </ol>
+          </div>
+          <div class="network-map" aria-label="Diagram of devices, routers, ISPs, cables, and servers">
+            <div class="map-line l1"></div><div class="map-line l2"></div><div class="map-line l3"></div><div class="map-line l4"></div>
+            <div class="map-node pc"><svg><use href="#i-browser"/></svg><small>Devices</small></div>
+            <div class="map-node router"><svg><use href="#i-network"/></svg><small>Router</small></div>
+            <div class="map-node isp"><svg><use href="#i-globe"/></svg><small>ISP</small></div>
+            <div class="map-node cable"><span>⌁</span><small>Fiber links</small></div>
+            <div class="map-node server"><svg><use href="#i-server"/></svg><small>Servers</small></div>
+          </div>
+        </div>
+        <div class="bottom-highlight">The Internet is a physical network infrastructure that connects billions of devices worldwide.</div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="How the Internet Works">
+      <div class="slide-inner">
+        <div class="eyebrow">03 · REQUEST AND RESPONSE</div><h2>How the Internet <span>Works</span></h2>
+        <p class="lede compact">Opening a website follows a clear request-and-response path.</p>
+        <div class="process-flow" aria-label="Website access flow">
+          <div class="flow-step"><span class="flow-no">1</span><svg><use href="#i-user"/></svg><b>Enter a web address</b><small>Example: www.example.com</small></div><div class="flow-arrow"></div>
+          <div class="flow-step"><span class="flow-no">2</span><svg><use href="#i-search"/></svg><b>DNS lookup</b><small>Finds the IP address</small></div><div class="flow-arrow"></div>
+          <div class="flow-step"><span class="flow-no">3</span><svg><use href="#i-network"/></svg><b>HTTP/HTTPS request</b><small>Travels across the network</small></div><div class="flow-arrow"></div>
+          <div class="flow-step"><span class="flow-no">4</span><svg><use href="#i-server"/></svg><b>Server response</b><small>Returns web resources</small></div><div class="flow-arrow"></div>
+          <div class="flow-step"><span class="flow-no">5</span><svg><use href="#i-browser"/></svg><b>Browser renders</b><small>Displays the webpage</small></div>
+        </div>
+        <div class="bottom-highlight">DNS finds the IP address, HTTP/HTTPS transfers web resources, and the browser displays the webpage.</div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Browser: Definition and Examples">
+      <div class="slide-inner browser-layout">
+        <div><div class="eyebrow">04 · THE USER INTERFACE</div><h2>Web <span>Browser</span></h2>
+          <p class="lede">Software that lets users access, view, and interact with websites on the World Wide Web.</p>
+          <div class="browser-journey"><div><b>Request</b><span>Enter a URL or click a link</span></div><div><b>Lookup</b><span>DNS locates the server</span></div><div><b>Retrieval</b><span>HTTP/HTTPS gets the files</span></div><div><b>Rendering</b><span>HTML, CSS, and JavaScript become a page</span></div></div>
+          <div class="bottom-highlight inline">A web browser retrieves website resources and renders them into an interactive webpage.</div>
+        </div>
+        <div class="browser-mock" aria-label="Stylized browser window"><div class="mock-head"><i></i><i></i><i></i><span>https://example.com</span></div><div class="mock-body"><div class="mock-nav"></div><div class="mock-hero"><svg><use href="#i-globe"/></svg><b>Website content</b><span>HTML · CSS · JavaScript</span></div><div class="mock-cards"><em></em><em></em><em></em></div></div><p>Popular browsers: <strong>Chrome, Firefox, Edge, Safari, Opera, Brave</strong></p></div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Browser vs Search Engine">
+      <div class="slide-inner">
+        <div class="eyebrow">05 · CLEAR THE CONFUSION</div><h2>Browser vs <span>Search Engine</span></h2>
+        <div class="comparison" role="table" aria-label="Browser and search engine comparison">
+          <div class="compare-col browser-col"><div class="compare-title"><svg><use href="#i-browser"/></svg><h3>Browser</h3></div><p>Software application installed on or available through a device.</p><ul><li>Opens and interacts with websites</li><li>Renders web pages and media</li><li>Examples: Chrome, Firefox, Safari, Edge</li></ul></div>
+          <div class="compare-divider"><span>VS</span></div>
+          <div class="compare-col search-col"><div class="compare-title"><svg><use href="#i-search"/></svg><h3>Search engine</h3></div><p>Online service that helps people discover information and websites.</p><ul><li>Uses an index to find relevant results</li><li>Runs inside a browser</li><li>Examples: Google Search, Bing, DuckDuckGo</li></ul></div>
+        </div>
+        <div class="bottom-highlight">Google Chrome is a browser; Google Search is a search engine.</div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Client: Definition and Role">
+      <div class="slide-inner client-layout">
+        <div><div class="eyebrow">06 · REQUEST ORIGIN</div><h2>The <span>Client</span></h2><p class="lede">A <strong>client</strong> is a device or software application that sends requests to a server for data or services.</p>
+          <div class="client-examples"><span><svg><use href="#i-browser"/></svg>Laptop browser</span><span><svg><use href="#i-user"/></svg>Mobile app</span><span><svg><use href="#i-search"/></svg>Email app</span></div>
+          <div class="bottom-highlight inline">The client initiates requests; the server responds to those requests.</div></div>
+        <div class="client-scene" aria-label="Client request diagram"><div class="person-node"><svg><use href="#i-user"/></svg><b>User</b></div><div class="request-beam"><span>request</span></div><div class="client-node"><svg><use href="#i-browser"/></svg><b>Browser client</b><small>Displays information<br>Collects user input<br>Calls backend APIs</small></div><div class="request-beam to-server"><span>API request</span></div><div class="tiny-server"><svg><use href="#i-server"/></svg><b>Server</b></div></div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Server: Definition and Types">
+      <div class="slide-inner">
+        <div class="eyebrow">07 · THE SERVICE PROVIDER</div><h2>The <span>Server</span></h2><p class="lede compact">A hardware system or software program that processes client requests and provides data, resources, or services over a network.</p>
+        <div class="server-types"><article><svg><use href="#i-browser"/></svg><b>Web server</b><span>Delivers website resources. Apache, Nginx.</span></article><article><svg><use href="#i-db"/></svg><b>Database server</b><span>Stores and retrieves data. MySQL, PostgreSQL, MongoDB.</span></article><article><svg><use href="#i-code"/></svg><b>Application server</b><span>Runs application logic and business rules.</span></article><article><svg><use href="#i-network"/></svg><b>File server</b><span>Stores and shares files and backups.</span></article><article><svg><use href="#i-search"/></svg><b>Mail server</b><span>Handles email sending, receiving, and storage.</span></article></div>
+        <div class="bottom-highlight">A server receives requests, processes them, and returns appropriate responses.</div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Client–Server Architecture">
+      <div class="slide-inner architecture-slide">
+        <div class="eyebrow">08 · FUNDAMENTAL WEB MODEL</div><h2>Client–Server <span>Architecture</span></h2>
+        <div class="architecture" aria-label="Client server architecture diagram"><div class="arch-node user"><svg><use href="#i-user"/></svg><b>User</b></div><div class="arch-link request"><span>request</span></div><div class="arch-node browser"><svg><use href="#i-browser"/></svg><b>Browser<br>Client</b></div><div class="arch-link request"><span>HTTPS</span></div><div class="arch-node internet"><svg><use href="#i-globe"/></svg><b>Internet</b></div><div class="arch-link request"><span>request</span></div><div class="arch-node webserver"><svg><use href="#i-server"/></svg><b>Web<br>Server</b></div><div class="arch-link data"><span>data</span></div><div class="arch-node database"><svg><use href="#i-db"/></svg><b>Application Logic<br>&amp; Database</b></div></div>
+        <div class="response-path"><span>Browser renders the server response for the user</span></div>
+        <div class="bottom-highlight">Most interactive websites depend on communication between clients, servers, and often databases.</div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Real-World Example">
+      <div class="slide-inner shopping-layout">
+        <div><div class="eyebrow">09 · IN CONTEXT</div><h2>Online Shopping <span>Example</span></h2><p class="lede">A product search shows how the Internet, browser, client, and server work together.</p>
+          <ol class="shopping-steps"><li><b>1</b> User opens a browser and visits a shop.</li><li><b>2</b> The browser uses the Internet to reach the website.</li><li><b>3</b> The browser client requests product information.</li><li><b>4</b> The server gets product details from a database.</li><li><b>5</b> The browser displays products on screen.</li></ol></div>
+        <div class="shop-illustration" aria-label="Online shop client server flow"><div class="shop-screen"><div class="shop-top">MyStore <span>⌕</span></div><div class="product-grid"><i></i><i></i><i></i><i></i></div></div><div class="shop-flow"><span>client request</span><div></div><span>product response</span></div><div class="shop-server"><svg><use href="#i-server"/></svg><svg><use href="#i-db"/></svg><b>Server + database</b></div></div>
+        <div class="bottom-highlight">The Internet connects the systems, the browser displays the website, the client sends requests, and the server processes them.</div>
+      </div>
+    </section>
+
+    <section class="slide" data-title="Quick Revision">
+      <div class="slide-inner revision-slide">
+        <div class="eyebrow">10 · EXAM PREPARATION</div><h2>Quick <span>Revision</span></h2>
+        <div class="revision-grid"><article><svg><use href="#i-globe"/></svg><h3>Internet</h3><p>A global network of interconnected networks.</p></article><article><svg><use href="#i-browser"/></svg><h3>Browser</h3><p>Software used to access and display websites.</p></article><article><svg><use href="#i-user"/></svg><h3>Client</h3><p>A device or application that requests resources.</p></article><article><svg><use href="#i-server"/></svg><h3>Server</h3><p>A system that processes requests and provides resources.</p></article></div>
+        <div class="quick-questions"><b>Quick questions</b><span>1. What is the difference between a browser and a search engine?</span><span>2. What is the role of TCP/IP?</span><span>3. Explain the client–server model.</span></div>
+      </div>
+    </section>
+
+    <section class="slide thank-you" data-title="Thank You">
+      <div class="cover-art"></div><div class="cover-wash"></div>
+      <div class="thanks-copy"><div class="eyebrow">END OF PRESENTATION</div><h2>Thank <span>You!</span></h2><p>Questions and Discussion</p><div class="thanks-icons"><svg><use href="#i-globe"/></svg><svg><use href="#i-browser"/></svg><svg><use href="#i-server"/></svg></div></div>
+    </section>
+  </main>
+  <footer class="controlbar"><div class="progress-track"><div id="progress"></div></div><div class="controls"><button id="prev" type="button" aria-label="Previous slide">← <span>Previous</span></button><button id="next" type="button" aria-label="Next slide"><span>Next</span> →</button></div><p class="hint">Use ← → keys · P for focus mode</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
